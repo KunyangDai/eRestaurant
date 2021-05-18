@@ -1,7 +1,4 @@
 <%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
-<%@ page isELIgnored="false" %> 
 <%
 String path = request.getContextPath();
 %>
@@ -43,11 +40,11 @@ String path = request.getContextPath();
         </script>
 	</head>
 	<body>
-			<form action="<%=path %>/user?type=userEdit" name="form1" method="post">
+			<form action="<%=path %>/user?type=userReg" name="form1" method="post">
 				<table width="98%" border="0" align="center" cellpadding="0" cellspacing="1" bgcolor="#CCCCCC">
 					<tr>
 						<th height="40" colspan="2" bgcolor="#FFFFFF" class="f12b-red" style="font-size: 11px;">
-							用 户 信 息
+							用 户 注 册
 						</th>
 					</tr>
 					<tr>
@@ -56,7 +53,7 @@ String path = request.getContextPath();
 						</td>
 						<td width="80%" bgcolor="#FFFFFF">
 							&nbsp;
-							<input type="text" name="loginname" id="loginname" value="${sessionScope.user.loginname}" readonly="readonly"/>
+							<input type="text" name="loginname" id="loginname"/>
 						</td>
 					</tr>
 					<tr>
@@ -65,7 +62,7 @@ String path = request.getContextPath();
 						</td>
 						<td bgcolor="#FFFFFF">
 							&nbsp;
-							<input type="password" name="loginpw" value="${sessionScope.user.loginpw}" />
+							<input type="password" name="loginpw"/>
 						</td>
 					</tr>
 					<tr>
@@ -74,7 +71,7 @@ String path = request.getContextPath();
 						</td>
 						<td bgcolor="#FFFFFF">
 							&nbsp;
-							<input type="password" name="loginpw1" value="${sessionScope.user.loginpw}" />
+							<input type="password" name="loginpw1"/>
 						</td>
 					</tr>
 					<tr>
@@ -83,7 +80,7 @@ String path = request.getContextPath();
 						</td>
 						<td bgcolor="#FFFFFF">
 							&nbsp;
-							<input type="text" name="name" value="${sessionScope.user.name}" />
+							<input type="text" name="name"/>
 						</td>
 					</tr>
 					<tr>
@@ -103,7 +100,7 @@ String path = request.getContextPath();
 						</td>
 						<td bgcolor="#FFFFFF">
 						    &nbsp;
-							<input type="text" name="age" value="${sessionScope.user.age}" />
+							<input type="text" name="age"/>
 						</td>
 					</tr>
 					<tr>
@@ -112,7 +109,7 @@ String path = request.getContextPath();
 						</td>
 						<td bgcolor="#FFFFFF">
 							&nbsp;
-							<input type="text" name="address" value="${sessionScope.user.address}" />
+							<input type="text" name="address"/>
 						</td>
 					</tr>
 					
@@ -122,7 +119,7 @@ String path = request.getContextPath();
 						</td>
 						<td bgcolor="#FFFFFF">
 							&nbsp;
-							<input type="text" name="tel" value="${sessionScope.user.tel}" />
+							<input type="text" name="tel"/>
 						</td>
 					</tr>
 					<tr>
@@ -131,7 +128,7 @@ String path = request.getContextPath();
 						</td>
 						<td bgcolor="#FFFFFF">
 							&nbsp;
-							<input type="text" name="email" value="${sessionScope.user.email}" />
+							<input type="text" name="email"/>
 						</td>
 					</tr>
 					<tr>
@@ -140,7 +137,7 @@ String path = request.getContextPath();
 						</td>
 						<td bgcolor="#FFFFFF">
 							&nbsp;
-							<input type="text" name="qq" value="${sessionScope.user.qq}" />
+							<input type="text" name="qq"/>
 						</td>
 					</tr>
 					<tr>
@@ -149,7 +146,6 @@ String path = request.getContextPath();
 						</td>
 						<td bgcolor="#FFFFFF">
 							&nbsp;
-							<input type="hidden" name="id" value="${sessionScope.user.id}"/>
 							<input type="button" value="确定" onclick="check1();"/>
 							<input type="button" value="取消" onclick="closeOpen()"/>
 						</td>
